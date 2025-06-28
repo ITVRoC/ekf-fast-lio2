@@ -1,0 +1,16 @@
+<launch>
+  <!-- Load parameters from YAML -->
+  <rosparam file="$(find ekf_fast_lio2)/config/adaptive_filter_parameters.yaml" command="load" />
+
+  <!-- Launch the EKF node -->
+  <node pkg="ekf_fast_lio2" 
+        type="EKFAdaptiveFilter" 
+        name="EKFAdaptiveFilter" 
+        output="screen">
+        <!-- Optional remappings (if needed) -->
+        <!--
+        <remap from="/wheel_odom" to="/your_robot/wheel_odom" />
+        <remap from="/Odometry" to="/your_robot/lio_odom" />
+        -->
+  </node>
+</launch>

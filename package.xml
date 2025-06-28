@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>ekf_fast_lio2</name>
+  <version>1.0.0</version>
+  <description>EKF-based sensor fusion package for Fast-LIO2 and wheel odometry.</description>
+  
+  <maintainer email="gilmarpcruzjunior@gmail.com">Gilmar Pereira</maintainer>
+  <maintainer email="gmdeoliveira@ymail.com">Gabriel Malaquias</maintainer>
+  
+  <license>BSD</license>
+
+  <author >Gilmar Pereira da Cruz Junior</author>
+  <author >Gabriel Malaquias de Oliveira</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+  <build_depend>geometry_msgs</build_depend>
+  <build_depend>nav_msgs</build_depend>
+  <build_depend>sensor_msgs</build_depend>
+  <build_depend>tf</build_depend>
+
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+  <exec_depend>geometry_msgs</exec_depend>
+  <exec_depend>nav_msgs</exec_depend>
+  <exec_depend>sensor_msgs</exec_depend>
+  <exec_depend>tf</exec_depend>
+
+</package>

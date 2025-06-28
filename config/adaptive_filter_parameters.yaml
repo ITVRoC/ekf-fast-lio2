@@ -1,0 +1,25 @@
+ #Adaptive filter parameters
+ adaptive_filter:
+
+  # Filter settings
+  enableImu: true
+  enableWheel: true
+  enableLidar: true
+  filterFreq: "l"
+  
+  # Covariance gains
+  lidarG: 75
+  wheelG: 0.5
+  imuG: 100
+
+  # Topic names
+  imuTopic: "/imu"
+  wheelTopic: "/odom"
+  FastLIO2_OdometryTopic: "/Odometry"
+  filterTopic: "/filter_odom"
+
+  # Wheel odometry covariance adaptive positive constants
+  gamma_vx: 0.05
+  gamma_omegaz: 0.01
+  delta_vx: 0.0001
+  delta_omegaz: 0.00001

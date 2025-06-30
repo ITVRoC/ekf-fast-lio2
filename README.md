@@ -1,7 +1,7 @@
 
 # EKF-Fast-LIO2
 
-This ROS package implements a customized Extended Kalman Filter (EKF) for sensor fusion using:
+This module integrates a customized Extended Kalman Filter (EKF) into the Fast-LIO2 codebase. The EKF performs sensor fusion using:
 
 - **Fast-LIO2 odometry**
 - **Wheel encoder odometry**
@@ -74,18 +74,18 @@ The configuration file is located at `config/adaptive_filter_parameters.yaml`. K
 ## 📂 File Structure
 
 ```
-ekf_fast_lio2/
+This EKF module is merged into the existing **Fast-LIO2** directory structure as follows:
+
+```
+EKF-Fast-LIO2/
 ├── src/
-│   └── EKFAdaptiveFilter.cpp
+│   └── EKFAdaptiveFilter.cpp         # EKF filter implementation
 ├── include/
-│   └── settings_adaptive_filter.h
+│   └── settings_adaptive_filter.h   # EKF parameter definitions
 ├── config/
-│   └── adaptive_filter_parameters.yaml
+│   └── adaptive_filter_parameters.yaml  # YAML configuration file
 ├── launch/
-│   └── ekf_fast_lio2.launch
-├── CMakeLists.txt
-├── package.xml
-└── README.md
+│   └── ekf.launch                   # ROS launch file (optional)
 ```
 
 ---
@@ -98,5 +98,6 @@ ekf_fast_lio2/
 - `nav_msgs`
 - `sensor_msgs`
 - `tf`
+- **Fast-LIO2 core dependencies**
 
 ---

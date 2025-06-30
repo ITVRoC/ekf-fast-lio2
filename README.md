@@ -85,7 +85,7 @@ EKF-Fast-LIO2/
 ├── config/
 │   └── adaptive_filter_parameters.yaml  # YAML configuration file
 ├── launch/
-│   └── ekf.launch                   # ROS launch file (optional)
+│   └── ekf_fast_lio2.launch                   # ROS launch file (optional)
 ```
 
 ---

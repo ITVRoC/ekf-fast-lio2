@@ -73,7 +73,7 @@ The configuration file is located at `config/adaptive_filter_parameters.yaml`. K
 
 ## 📂 File Structure
 
-```
+
 This EKF module is merged into the existing **Fast-LIO2** directory structure as follows:
 
 ```

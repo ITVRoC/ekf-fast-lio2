@@ -1,16 +1,25 @@
 <launch>
   <!-- Load parameters from YAML -->
   <rosparam file="$(find ekf_fast_lio2)/config/adaptive_filter_parameters.yaml" command="load" />
+	<rosparam command="load" 
+			  file="$(find ekf_fast_lio2)/config/velodyne_gazebo.yaml" />
+
+	<param name="feature_extract_enable" type="bool" value="1"/>
+	<param name="point_filter_num" type="int" value="3"/>
+	<param name="max_iteration" type="int" value="3" />
+	<param name="filter_size_surf" type="double" value="0.5" />
+	<param name="filter_size_map" type="double" value="0.5" />
+	<param name="cube_side_length" type="double" value="1000" />
+	<param name="runtime_pos_log_enable" type="bool" value="0" />
+	
+  <node pkg="ekf_fast_lio2" 
+		  type="fastlio_mapping" 
+		  name="laserMapping" 
+		  output="screen" /> 
 
   <!-- Launch the EKF node -->
   <node pkg="ekf_fast_lio2" 
         type="EKFAdaptiveFilter" 
         name="EKFAdaptiveFilter" 
-        output="screen">
-        <!-- Optional remappings (if needed) -->
-        <!--
-        <remap from="/wheel_odom" to="/your_robot/wheel_odom" />
-        <remap from="/Odometry" to="/your_robot/lio_odom" />
-        -->
-  </node>
+        output="screen"/>
 </launch>
